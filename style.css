@@ -88,7 +88,6 @@ h1 {
   width: 100%;
  
 }
-
 .container {
     position: relative;
     width: 24px;
@@ -135,10 +134,13 @@ h1 {
     width: 50%;
     transform: skew(0deg, -30deg);
   }
-  .portfolio {
+  .about {
     height: 100vh;
-    background: black;
-   
+    width: 100%;
+    background:white !important;
+    transition: 0ms;
+    display: flex;
+    justify-content: space-between;
   }
   #navbar { 
     position: fixed; 
@@ -148,56 +150,22 @@ h1 {
     padding: 0px;
     font-family: 'Cinzel', serif ;
   }
-  #navbar a {
+   #navbar a {
     float: left;
     display: block;
-    color: white;
+    color: black;
     text-align: center;
     padding: 15px;
     text-decoration: none;
   }
-  
-  #navbar a:hover {
-    background-color: #ddd;
-    color: black;
-    transition: 100ms;
+  .dropdown-menu.show {
+    background:none !important; 
+    color: none;
   }
-@keyframes move {
-    25% {
-      opacity: 1;
-  
-    }
-    33% {
-      opacity: 1;
-      transform: translateY(30px);
-    }
-    67% {
-      opacity: 1;
-      transform: translateY(40px);
-    }
-    100% {
-      opacity: 0;
-      transform: translateY(55px) scale3d(0.5, 0.5, 0.5);
-    }
+  .nav-link {
+    color: black !important;
   }
-  
-.text {
-    display: block;
-    margin-top: 75px;
-    margin-left: -30px;
-    font-family: "Helvetica Neue", "Helvetica", Arial, sans-serif;
-    font-size: 12px;
-    color: #fff;
-    text-transform: uppercase;
-    white-space: nowrap;
-    opacity: .25;
-    animation: pulse 2s linear alternate infinite;
-  } 
-@keyframes pulse {
-    to {
-      opacity: 1;
-    }
-  }
+
 .navbar {
     position: fixed; 
     top: 0; 
@@ -212,23 +180,25 @@ h1 {
     padding: 15px;
     text-decoration: none;
   }
-@media (max-width:320px){
-  .header h2 { 
-    font-size: 70px !important;
-   } 
-  img.tag{
-    width: 100%;
-    
-  }
-  .header p {
-    font-size: 30px;
-    padding: 0px !important;
-  }
-  .header h1 {
-    font-size:30px !important;
-    padding: 150px 0px 0px 0px !important;
-  }
+.logo.img {
+  color:black !important;
 }
+.ab {
+  width: 100%;
+  display: flex;
+  align-items: center;
+ 
+}
+.ab p {
+  width: 40%;
+  margin: auto;
+}
+.profile-image {
+  border: 1px solid black;
+  margin: auto;
+  
+}
+
 @media (max-width:450px){
   .header h2 { 
     font-size: 70px !important;
@@ -251,6 +221,16 @@ h1 {
     .header h1 {
       font-size:30px !important;
       padding: 180px 0px 0px 0px !important;
+    }
+    .profile-image {
+      margin: 0px !important;
+    }
+    .ab {
+      text-align: center !important;
+    }
+    .ab p {
+      width: auto;
+      margin: 20px;
     }
   }
   @media (max-width:450px){
@@ -283,11 +263,26 @@ h1 {
         padding: 0px !important;
       }
     }
-
-
-
-
-
-.laki {
-  background: white;
-}
+    @keyframes move {
+    25% {
+      opacity: 1;
+  
+    }
+    33% {
+      opacity: 1;
+      transform: translateY(30px);
+    }
+    67% {
+      opacity: 1;
+      transform: translateY(40px);
+    }
+    100% {
+      opacity: 0;
+      transform: translateY(55px) scale3d(0.5, 0.5, 0.5);
+    }
+  }
+  @keyframes pulse {
+    to {
+      opacity: 1;
+    }
+  }
